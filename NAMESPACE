@@ -3,6 +3,7 @@
 export(dunnTEST)
 export(ggalluvial.abun)
 export(ggbarplot)
+export(ggboxplot)
 export(ggboxplot.Let.Sig.dunTEST)
 export(ggboxplot.LetSig)
 export(ggboxplot.LetSig1)
