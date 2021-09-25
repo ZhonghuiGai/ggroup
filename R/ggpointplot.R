@@ -7,6 +7,7 @@
 #' is "simple".
 #' @param fun.data The function used to draw the errorbar, one of "mean_sdl" and
 #' "mean_se"
+#' @param size the size of point
 #'
 #' @return a point plot
 #' @export
@@ -22,7 +23,8 @@
 
 ggpointplot <- function(data,
                         type = "simple",
-                        fun.data = mean_sdl){
+                        fun.data = mean_sdl,
+                        size = 4){
   if(!"group" %in% colnames(data)){
     stop("The grouping information must be the 'group' collum.")
   }
@@ -44,17 +46,17 @@ ggpointplot <- function(data,
   # ----
   if (type == "simple") {
     p <- p + stat_summary(geom = "errorbar",
-                          fun.data = fun.data, width = 0.1) +
-      stat_summary(geom = "point", fun = mean, aes(fill = group)) +
-      stat_summary(geom = "line", fun = mean, aes(colour = group))
+                          fun.data = fun.data, width = 0.1, show.legend = FALSE) +
+      stat_summary(geom = "point", fun = mean, aes(fill = group), size = size) +
+      stat_summary(geom = "line", fun = mean, aes(colour = group), size = 1, show.legend = FALSE)
   }
   if (type == "facet") {
    p <- p +
      stat_summary(geom = "errorbar", fun.data = fun.data,
                   width = 0.25, show.legend = FALSE,
-                  position=position_dodge(width=0.5)) +
+                  position=position_dodge(width=0.5), show.legend= FALSE) +
      stat_summary(fun = mean, geom = "point", size = 1,
-                  position = position_dodge(width = 0.5)) +
+                  position = position_dodge(width = 0.5), size = size) +
      facet_wrap(. ~variable, nrow = 1, scales = "free_x") +
      theme_minimal() +
      theme(strip.text.x.top = element_text(angle = 0),
@@ -69,7 +71,7 @@ ggpointplot <- function(data,
            panel.grid.minor.y = element_blank(),
            panel.spacing = unit(0, "lines"),
            panel.grid.major.x = element_line(size = 0.1, colour = "gray95"),
-           panel.border = element_rect(size = 0.2, colour = "gray60",
+           panel.border = element_rect(size = 0.2, colour = "black",
                                        fill = "transparent"),
            strip.background = element_rect(fill="#d6fff655",colour="gray60",
                                            size=0.2),

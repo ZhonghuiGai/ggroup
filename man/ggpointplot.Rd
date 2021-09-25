@@ -5,7 +5,7 @@
 \title{Draw a point&line plot using multiple variable according the grouping info.
 Function 2.}
 \usage{
-ggpointplot(data, type = "simple", fun.data = mean_sdl)
+ggpointplot(data, type = "simple", fun.data = mean_sdl, size = 4)
 }
 \arguments{
 \item{data}{A dataframe containing the grouping info and more than one numeric
@@ -16,6 +16,8 @@ is "simple".}
 
 \item{fun.data}{The function used to draw the errorbar, one of "mean_sdl" and
 "mean_se"}
+
+\item{size}{the size of point}
 }
 \value{
 a point plot
