@@ -1,16 +1,16 @@
-#' Draw boxplot based on ggplot2, using data containg grouping info.
+#' Draw boxplot based on ggplot2, using data containing grouping info.
 #' Only can draw one valuable. Function 1.
 #'
-#' @param data A dataframe that containing the grouping info and multiple numaric valiabes.
-#' @param variable The collum that will be used to draw the barplot.
+#' @param data A dataframe that containing the grouping info and multiple numeric valiabes.
+#' @param variable The column that will be used to draw the bar plot.
 #' @param comparisons a list that indicated which group to be compared.
 #' @param test The method that used for significant test, one of "t.test" and "wilcox.test".
 #' The default method is "wilcox.test".
-#' @param jitter A boolean value indicates whether add jitter points to the plot.
+#' @param jitter A boolean value indicates whether add jitters points to the plot.
 #' The default value is TRUE.
 #' @param y_position A vector shows the values to be used in positions of the results
 #' significant tests.
-#' @param x.text.angle A numaric number indicated the angle of axix.test.x.
+#' @param x.text.angle A numeric number indicated the angle of axix.test.x.
 #' @param map_signif_level A logic value
 #' @param tip_length the length of tip, default is 0
 #'

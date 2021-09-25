@@ -10,7 +10,7 @@
 #' @examples
 #' data <- iris
 #' colnames(data)[5] <- "group"
-#' dunnTEST(data = data, method = "bh)
+#' dunnTEST(data = data, method = "bh")
 dunnTEST <- function(data, method = "bh"){
   name <- colnames(data)
   stopifnot("group" %in% name)

@@ -17,6 +17,11 @@ a data frame
 \description{
 A function for non-parametric multi-group test using dunn.test package
 }
+\examples{
+data <- iris
+colnames(data)[5] <- "group"
+dunnTEST(data = data, method = "bh")
+}
 \author{
 Zhonghui Gai
 }

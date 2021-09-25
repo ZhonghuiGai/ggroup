@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggboxplot.R
 \name{ggboxplot}
 \alias{ggboxplot}
-\title{Draw boxplot based on ggplot2, using data containg grouping info.
+\title{Draw boxplot based on ggplot2, using data containing grouping info.
 Only can draw one valuable. Function 1.}
 \usage{
 ggboxplot(
@@ -18,22 +18,22 @@ ggboxplot(
 )
 }
 \arguments{
-\item{data}{A dataframe that containing the grouping info and multiple numaric valiabes.}
+\item{data}{A dataframe that containing the grouping info and multiple numeric valiabes.}
 
-\item{variable}{The collum that will be used to draw the barplot.}
+\item{variable}{The column that will be used to draw the bar plot.}
 
 \item{comparisons}{a list that indicated which group to be compared.}
 
 \item{test}{The method that used for significant test, one of "t.test" and "wilcox.test".
 The default method is "wilcox.test".}
 
-\item{jitter}{A boolean value indicates whether add jitter points to the plot.
+\item{jitter}{A boolean value indicates whether add jitters points to the plot.
 The default value is TRUE.}
 
 \item{y_position}{A vector shows the values to be used in positions of the results
 significant tests.}
 
-\item{x.text.angle}{A numaric number indicated the angle of axix.test.x.}
+\item{x.text.angle}{A numeric number indicated the angle of axix.test.x.}
 
 \item{map_signif_level}{A logic value}
 
@@ -43,7 +43,7 @@ significant tests.}
 The ggbarplot
 }
 \description{
-Draw boxplot based on ggplot2, using data containg grouping info.
+Draw boxplot based on ggplot2, using data containing grouping info.
 Only can draw one valuable. Function 1.
 }
 \examples{
